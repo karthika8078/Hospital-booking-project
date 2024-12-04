@@ -1,0 +1,780 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+  
+  /*nanbar*/
+
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f8f8;
+  }
+  
+  .navbar-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 12px;
+    background-color: #fff;
+  }
+  
+  .navbar-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .logo {
+    height: 40px;
+    margin-right: 15px;
+  }
+  
+  .menu-icon {
+    margin-left: auto;
+    cursor: pointer;
+  }
+
+  /*side*/
+
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 500px;
+    padding: 15px;
+    background-color: #d32f2f;
+  }
+  
+  .sidebar-btn {
+    background-color: #d32f2f;
+    color: #fff;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+  }
+  
+  .sidebar-btn:hover {
+    background-color: #a72828;
+  }
+/*home*/  
+
+.main-content {
+  display: flex;
+}
+
+.content {
+  padding: 20px;
+  margin-left: 200px; /* Adjust for sidebar width */
+  flex: 1;
+}
+
+.appointment-banner {
+  background-color: #d32f2f;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.app-links {
+  display: flex;
+  gap: 10px;
+}
+
+.app-icon {
+  width: 120px;
+  cursor: pointer;
+}
+
+
+/*src/components/AppointmentPage.css*/
+
+
+.appointment-page {
+  text-align: center;
+  margin: 20px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background-color: #4caf50;
+  color: white;
+  padding: 20px 40px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.card:hover {
+  background-color: #388e3c;
+}
+
+/*LoginPage.css*/
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f4f8;
+}
+
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("../assets/background.jpg"); /* Add your background image */
+  background-size: cover;
+  background-position: center;
+}
+
+.login-container {
+  background: #fff;
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+}
+
+h2 {
+  color: #2d6cdf;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.captcha-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.captcha-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.captcha-image {
+  font-weight: bold;
+  background: #f6d425;
+  color: #000;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.refresh-captcha {
+  background: none;
+  border: none;
+  color: #2d6cdf;
+  cursor: pointer;
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+.refresh-captcha:hover {
+  color: #0a58ca;
+}
+
+.forgot-link {
+  color: #2d6cdf;
+  float: right;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+.login-button {
+  background-color: #2d6cdf;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #0a58ca;
+}
+
+.signup-link {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.signup-link a {
+  color: #2d6cdf;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+
+
+/*RegistrationPage.js*/
+
+.registration-page {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.registration-page h2 {
+  text-align: center;
+}
+
+.registration-page form {
+  display: flex;
+  flex-direction: column;
+}
+
+.registration-page label {
+  margin: 10px 0 5px;
+}
+
+.registration-page input {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.registration-page button {
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.registration-page button:hover {
+  background-color: #388e3c;
+}
+/*LoginPage.css or RegistrationPage.css.*/
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+.login-page,
+.registration-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f3f4f6;
+}
+
+.login-container,
+.registration-container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 400px;
+}
+
+h2 {
+  color: #2d6cdf;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.toggle-password,
+.refresh-captcha {
+  background: none;
+  border: none;
+  color: #2d6cdf;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.toggle-password:hover,
+.refresh-captcha:hover {
+  text-decoration: underline;
+}
+
+.login-button,
+.register-button {
+  background-color: #2d6cdf;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-button:hover,
+.register-button:hover {
+  background-color: #1b4bb3;
+}
+
+.signup-link {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.signup-action {
+  color: #2d6cdf;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/*about*/
+.navbar1 {
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f8f8;
+  
+}
+
+.navbar-top1 {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 12px;
+  background-color: #fff;
+}
+
+
+
+
+/*footer*/
+
+.footer {
+background-color: #2c3e50;
+color: white;
+padding: 20px 0;
+text-align: center;
+}
+
+.footer-content {
+display: flex;
+justify-content: space-between;
+padding: 0 20px;
+}
+
+.footer-left,
+.footer-right {
+text-align: left;
+}
+
+.footer-left h4,
+.footer-right h4 {
+margin-bottom: 10px;
+}
+
+.footer-right a {
+color: white;
+text-decoration: none;
+margin: 0 5px;
+}
+
+.footer-right a:hover {
+text-decoration: underline;
+}
+
+.footer-bottom {
+margin-top: 20px;
+font-size: 12px;
+}
+
+
+
+/* Login Page Styles */
+.login-page {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.login-page h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Form input styles */
+input {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #5c6bc0;
+  outline: none;
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+/* Button styles */
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #5c6bc0;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #3f51b5;
+}
+
+button:disabled {
+  background-color: #bbb;
+  cursor: not-allowed;
+}
+
+/* Additional styles */
+button:active {
+  transform: translateY(1px);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 480px) {
+  .login-page {
+    padding: 20px;
+  }
+
+  .login-page h2 {
+    font-size: 20px;
+  }
+}
+
+
+/* Registration Page Styles */
+.registration-page {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.registration-page h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.registration-page form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.registration-page input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.registration-page input[type="text"],
+.registration-page input[type="email"],
+.registration-page input[type="password"],
+.registration-page input[type="date"] {
+  margin-bottom: 10px;
+}
+
+.registration-page button {
+  background-color: #5c6bc0;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.registration-page button:hover {
+  background-color: #3e4a92;
+}
+
+.registration-page button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.registration-page input:focus {
+  outline: none;
+  border-color: #5c6bc0;
+}
+
+@media (max-width: 600px) {
+  .registration-page {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .registration-page h2 {
+    font-size: 24px;
+  }
+}
+
+
+/* Appointment Page Styling */
+.appointment-page {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.appointment-page h1 {
+  text-align: center;
+  color: #1a73e8;
+  margin-bottom: 20px;
+}
+
+form label {
+  display: block;
+  margin: 15px 0 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+form input, form select, form button {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form input:focus, form select:focus {
+  border-color: #1a73e8;
+  outline: none;
+}
+
+form button {
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #155bb5;
+}
+
+.appointment-token {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.appointment-token h3 {
+  color: #155bb5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar-top {
+    justify-content: center;
+  }
+
+  .appointment-page {
+    padding: 15px;
+  }
+
+  form label {
+    font-size: 12px;
+  }
+
+  form input, form select, form button {
+    font-size: 12px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
